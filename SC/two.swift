@@ -72,7 +72,7 @@ class two: UIViewController {
             case "ICE1":
                 grade2 = grade2 + 1
                 TEAMICE.text = "\(grade2)"
-            case "ICE2":
+            case "ICEd2":
                 grade2 = grade2 + 2
                 TEAMICE.text = "\(grade2)"
             case "ICE3":
