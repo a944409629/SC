@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B10ED271CE9EB84002E6CF8 /* SQLiteDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B10ED241CE9EB84002E6CF8 /* SQLiteDB.swift */; };
+		7B10ED281CE9EB84002E6CF8 /* SQLTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B10ED251CE9EB84002E6CF8 /* SQLTable.swift */; };
+		7B10ED291CE9EB84002E6CF8 /* String-Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B10ED261CE9EB84002E6CF8 /* String-Extras.swift */; };
+		7B10ED2B1CE9EB90002E6CF8 /* data.db in Resources */ = {isa = PBXBuildFile; fileRef = 7B10ED2A1CE9EB90002E6CF8 /* data.db */; };
+		7B10ED2D1CE9EBB2002E6CF8 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B10ED2C1CE9EBB2002E6CF8 /* libsqlite3.0.tbd */; };
 		7B5483B11CDAEFBA00C0BB98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5483B01CDAEFBA00C0BB98 /* AppDelegate.swift */; };
 		7B5483B31CDAEFBA00C0BB98 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5483B21CDAEFBA00C0BB98 /* ViewController.swift */; };
 		7B5483B61CDAEFBA00C0BB98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B5483B41CDAEFBA00C0BB98 /* Main.storyboard */; };
@@ -37,6 +42,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7B10ED221CE9EB09002E6CF8 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		7B10ED241CE9EB84002E6CF8 /* SQLiteDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SQLiteDB.swift; path = "../hangge_645-2/SQLiteDB/SQLiteDB.swift"; sourceTree = "<group>"; };
+		7B10ED251CE9EB84002E6CF8 /* SQLTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SQLTable.swift; path = "../hangge_645-2/SQLiteDB/SQLTable.swift"; sourceTree = "<group>"; };
+		7B10ED261CE9EB84002E6CF8 /* String-Extras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String-Extras.swift"; path = "../hangge_645-2/SQLiteDB/String-Extras.swift"; sourceTree = "<group>"; };
+		7B10ED2A1CE9EB90002E6CF8 /* data.db */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = data.db; path = "../hangge_645-2/data.db"; sourceTree = "<group>"; };
+		7B10ED2C1CE9EBB2002E6CF8 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		7B5483AD1CDAEFBA00C0BB98 /* SC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B5483B01CDAEFBA00C0BB98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B5483B21CDAEFBA00C0BB98 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B10ED2D1CE9EBB2002E6CF8 /* libsqlite3.0.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,9 +92,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7B10ED231CE9EB6A002E6CF8 /* db */ = {
+			isa = PBXGroup;
+			children = (
+				7B10ED241CE9EB84002E6CF8 /* SQLiteDB.swift */,
+				7B10ED251CE9EB84002E6CF8 /* SQLTable.swift */,
+				7B10ED261CE9EB84002E6CF8 /* String-Extras.swift */,
+			);
+			name = db;
+			sourceTree = "<group>";
+		};
 		7B5483A41CDAEFBA00C0BB98 = {
 			isa = PBXGroup;
 			children = (
+				7B10ED2C1CE9EBB2002E6CF8 /* libsqlite3.0.tbd */,
+				7B10ED2A1CE9EB90002E6CF8 /* data.db */,
+				7B10ED231CE9EB6A002E6CF8 /* db */,
 				7B5483AF1CDAEFBA00C0BB98 /* SC */,
 				7B5483C71CDAEFBA00C0BB98 /* SCTests */,
 				7B5483D21CDAEFBA00C0BB98 /* SCUITests */,
@@ -112,6 +137,7 @@
 				7B5483BF1CDAEFBA00C0BB98 /* Info.plist */,
 				7B5483B71CDAEFBA00C0BB98 /* SC.xcdatamodeld */,
 				7B5483E71CDAFC1600C0BB98 /* two.swift */,
+				7B10ED221CE9EB09002E6CF8 /* Header.h */,
 			);
 			path = SC;
 			sourceTree = "<group>";
@@ -239,6 +265,7 @@
 			files = (
 				7B5483BE1CDAEFBA00C0BB98 /* LaunchScreen.storyboard in Resources */,
 				7B5483E61CDAF3B800C0BB98 /* 1.png in Resources */,
+				7B10ED2B1CE9EB90002E6CF8 /* data.db in Resources */,
 				7B5483BB1CDAEFBA00C0BB98 /* Assets.xcassets in Resources */,
 				7B5483B61CDAEFBA00C0BB98 /* Main.storyboard in Resources */,
 			);
@@ -267,8 +294,11 @@
 			files = (
 				7B5483B31CDAEFBA00C0BB98 /* ViewController.swift in Sources */,
 				7B5483B11CDAEFBA00C0BB98 /* AppDelegate.swift in Sources */,
+				7B10ED271CE9EB84002E6CF8 /* SQLiteDB.swift in Sources */,
 				7B5483E81CDAFC1600C0BB98 /* two.swift in Sources */,
+				7B10ED291CE9EB84002E6CF8 /* String-Extras.swift in Sources */,
 				7B5483B91CDAEFBA00C0BB98 /* SC.xcdatamodeld in Sources */,
+				7B10ED281CE9EB84002E6CF8 /* SQLTable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,6 +444,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Monglian.SC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/yzq/Desktop/SC/SC/Header.h;
 			};
 			name = Debug;
 		};
@@ -425,6 +456,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Monglian.SC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/yzq/Desktop/SC/SC/Header.h;
 			};
 			name = Release;
 		};
@@ -495,6 +527,7 @@
 				7B5483DA1CDAEFBA00C0BB98 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7B5483DB1CDAEFBA00C0BB98 /* Build configuration list for PBXNativeTarget "SCTests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +536,7 @@
 				7B5483DD1CDAEFBA00C0BB98 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7B5483DE1CDAEFBA00C0BB98 /* Build configuration list for PBXNativeTarget "SCUITests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +545,7 @@
 				7B5483E01CDAEFBA00C0BB98 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
