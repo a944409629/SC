@@ -11,15 +11,19 @@ import UIKit
 class two: UIViewController {
    
     var db:SQLiteDB!
+    var time:NSTimer!
+    var timer:Int = 0
     @IBOutlet weak var TEAMICE: UITextField!
     @IBOutlet weak var TEAMFIRE: UITextField!
+    @IBOutlet weak var time1: UILabel!
+    @IBOutlet weak var time2: UILabel!
     var FIREgrade:String = ""
     var ICEgrade:String = ""
     var operand1:String = ""
     var operand2:String = ""
     var grade1 = 0
     var grade2 = 0
-
+   
  
     
     @IBOutlet var txtUname: UITextField!
@@ -68,18 +72,34 @@ class two: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
+    @IBAction func Start(sender: UIButton) {
+        time = NSTimer.scheduledTimerWithTimeInterval(1,target:self,selector:Selector("tickDown"),userInfo:nil,repeats: true)
+    }
+    
+    func tickDown(){
+        timer++
+        let sec = timer%60
+        let min = timer/60
+        time1.text = String (min)
+        time2.text = String (sec)
+        saveUser()
+    }
     @IBAction func AC(sender: UIButton) {
         let value = sender.currentTitle!
         if value == "清空分数" {
             FIREgrade = ""
             ICEgrade = ""
-            TEAMFIRE.text = ""
-            TEAMICE.text = ""
+            TEAMFIRE.text = "0"
+            TEAMICE.text = "0"
             grade1 = 0
             grade2 = 0
             return
         }
 
+    }
+    @IBAction func Stop(sender: UIButton) {
+        time.invalidate()
+        saveUser()
     }
        @IBAction func ADD(sender: UIButton) {
         let value = sender.currentTitle!
